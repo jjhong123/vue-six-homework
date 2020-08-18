@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- bootstrap pagination -->
-    <!-- <nav aria-label="Page navigation example">
+    <nav aria-label="Page navigation example">
       <ul class="pagination">
         <li class="page-item" :class='{"disabled":!compoPages.has_pre}'>
           <a class="page-link" href="#" aria-label="Previous" @click.prevent='turnPage(compoPages.current_page-1)'>
@@ -18,7 +18,7 @@
           </a>
         </li>
       </ul>
-    </nav> -->
+    </nav>
   </div>
 </template>
 
@@ -36,7 +36,7 @@ export default {
   },
   props:['compoPages'],
   methods:{
-    turnPage:function(item){
+    turnPage(item){
       this.$emit('turn', item);
     }
   },

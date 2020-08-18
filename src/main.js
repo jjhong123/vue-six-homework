@@ -42,11 +42,10 @@ new Vue({
 
 //檢查用戶是否登入
 router.beforeEach((to, from, next) => {
+  console.log('here')
   if (to.meta.requiresAuth) {
     // 確認登入
     check().then(response => {
-      console.log(response)
-
       if (response.data.success) {
         next();
       } else {

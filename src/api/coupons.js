@@ -40,10 +40,10 @@ export function createCoupon(data) {
   });
 }
 
-// 新建優惠卷
+// 套用優惠卷
 export function addCoupon(data) {
   return request({
-    url: `/api/${process.env.VUE_APP_COUSTOMERPATH}/admin/coupon`,
+    url: `/api/${process.env.VUE_APP_COUSTOMERPATH}/coupon`,
     method: "post",
     data: {
       data: {
